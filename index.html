@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Calculadora de propinas</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Calculadora de propinas - Divide fácilmente tu cuenta y propinas" />
+        <link href="styles/style.css" rel="stylesheet" />
+        <!-- Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Calculadora de Propinas</h1>
+            <p class="header__description">Divide fácilmente tu cuenta y calcula propinas</p>
+        </header>
+        
+        <main class="container">
+            <form action="#" id="formulario" class="form">
+                <div class="form__group">
+                    <label for="total" class="form__label">Total a Pagar</label>
+                    <div class="form__input-group">
+                        <span class="form__currency">Q</span>
+                        <input 
+                            type="number" 
+                            class="form__input" 
+                            id="total" 
+                            placeholder="0.00"
+                            step="0.01"
+                            min="0"
+                            required
+                        />
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label for="personas" class="form__label">Número de personas</label>
+                    <input 
+                        type="number" 
+                        class="form__input" 
+                        id="personas" 
+                        placeholder="1"
+                        min="1"
+                        step="1"
+                        required
+                    />
+                </div>
+
+                <div class="form__group">
+                    <label for="porcentaje" class="form__label">Porcentaje de propina</label>
+                    <div class="form__tip-buttons">
+                        <button type="button" class="tip-btn" data-tip="10">10%</button>
+                        <button type="button" class="tip-btn" data-tip="15">15%</button>
+                        <button type="button" class="tip-btn" data-tip="20">20%</button>
+                        <input 
+                            type="number" 
+                            class="form__input" 
+                            id="porcentaje" 
+                            placeholder="Otro %"
+                            min="0"
+                            max="100"
+                            required
+                        />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-calcular" id="btn-calcular">
+                    Calcular
+                </button>
+            </form>
+        </main>
+
+        <section id="mostrarDatos" class="results"></section>
+
+        <script src="scripts/app.js"></script>
+    </body>
+</html>
